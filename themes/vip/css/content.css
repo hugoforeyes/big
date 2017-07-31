@@ -1,0 +1,137 @@
+/* CSS Document */
+.vf_ctn * {
+	margin: 0;
+	padding: 0
+}
+.vf_ctn {
+	display: inline-block;
+	width: 100%;
+	line-height: 150%;
+	background: #fff;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+.vf_ctn p, .vf_ctn div {
+	margin-bottom: 12px;
+}
+.vf_ctn pre {
+	font-family: Courier
+}
+/* to preserve line-height and selector appearance */
+.vf_ctn sup {
+	vertical-align: super;
+}
+.vf_ctn sub {
+	vertical-align: sub;
+}
+.vf_ctn address {
+	font-style: italic
+}
+.vf_ctn img {
+	max-width: 450px;
+}
+.vf_ctn ul {
+	list-style: circle;
+	padding-left: 15px;
+}
+.vf_ctn ol {
+	list-style: decimal;
+	padding-left: 15px;
+}
+.vf_ctn ul li {
+	margin-bottom: 10px;
+}
+.vf_ctn ol li {
+	margin-bottom: 10px;
+}
+.vf_ctn ul > ul, .vf_ctn ul > ol, .vf_ctn ol > ol, .vf_ctn ol > ul {
+	margin-top: 5px;
+}
+.vf_ctn h1, .vf_ctn h2, .vf_ctn h3, .vf_ctn h4, .vf_ctn h5, .vf_ctn h6 {
+	line-height: 150%;
+	font-weight: bold;
+}
+.vf_ctn h1 {
+	font-size: 138.5%;
+}
+.vf_ctn h2 {
+	font-size: 123.1%;
+}
+.vf_ctn h3 {
+	font-size: 108%;
+}
+
+/* COMMON class */
+/* Striking deleted phrases. */
+.vf_ctn .del {
+	text-decoration: line-through;
+}
+.left {
+	float: left;
+	margin: right: 5px
+}
+.right {
+	float: right;
+	margin-left: 5px
+}
+.center {
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
+}
+.xx-small {
+	font-size: 9px
+}
+.x-small {
+	font-size: 10px
+}
+.small {
+	font-size: 11px
+}
+.normal {
+	font-size: 12px
+}
+.large {
+	font-size: 14px
+}
+.x-large {
+	font-size: 16px
+}
+.xx-large {
+	font-size: 18px
+}
+.big {
+	font-size: 24px
+}
+.x-big {
+	font-size: 36px
+}
+.xx-big {
+	font-size: 48px
+}
+
+/* TABLE */
+.border {
+	border-width: 1px;
+	border-style: solid;
+	border-color: inherit
+}
+.borderRow {
+	border-width: 1px;
+	border-style: solid;
+	border-color: inherit
+}
+.borderRow tr, .borderRow th {
+	border-width: 1px;
+	border-style: solid;
+	border-color: inherit
+}
+.borderAll {
+	border-width: 1px;
+	border-style: solid;
+	border-color: inherit
+}
+.borderAll td, .borderAll th {
+	border-width: 1px;
+	border-style: solid;
+	border-color: inherit
+}

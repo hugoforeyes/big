@@ -1,0 +1,8 @@
+.v_webadmin{position:relative;}
+.v_ctrl, .v_edit{position:absolute;z-index:99999;display:none;}
+.v_edit{left:38px;}
+.v_ctrl a,.v_edit a{width:32px;height:32px;display:inline-block;background:url(ctrl.png) 0 0;}
+.v_edit a{background:url(edit.png) 0 0;}
+.v_ctrl a:hover, .v_edit a:hover{background-position:0 -32px;}
+.v_webadmin:hover{background:#f0f0f0;}
+.v_webadmin:hover .v_ctrl, .v_webadmin:hover .v_edit{display:inline-block;}

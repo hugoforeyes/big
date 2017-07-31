@@ -1,0 +1,8 @@
+<?php
+/**
+* @version		$Id: welcome.php 2 2011-09-27 09:45 phu $
+* @package		vFramework.cp.welcome
+* @copyright	(C) 2011 Vipcom. All rights reserved.
+* @license		Commercial
+*/
+defined('V_LIFE')or die('v');$tpl->lang('welcome');$x=vFilter::url(vRequest::string('rss'));if($x){echo file_get_contents($x);die;}if($alt['section']=='license'){$cfg['debug']=0;$t='l='.$cfg['cp']['lang'].'&d='.str_replace('www.','',$_SERVER['HTTP_HOST']).'&k='.(isset($cfg['vkey'])?$cfg['vkey']:'0');$t=file_get_contents('http://www.vframework.net/license/?'.base64_encode($t));echo($t===false)?'<a style="color:#f00">Network problem !!!</a><br />Please try again later.':$t;die;}cpPage::nav('Welcome',VAR_INDEX.'?'.VAR_PAGE.'='.$alt['page']);vPage::head($tpl->_('Welcome'),'title');$n='';foreach($map->d as $k=>$v){if(isset($mod->r[$v['ctype']])&&$mod->r[$v['ctype']]['func']==2){$sql='SELECT id FROM #__'.$v['ctype'].' WHERE unread=1';if(!$db->query($sql))trigger_error($db->error(),E_USER_ERROR);$t=$db->affected_rows();$n.=($t)?'<tr><th><a href="'.VAR_INDEX.'?'.VAR_PAGE.'='.$v['alias'].'">'.$v['title'].'</a></th><td><a href="'.VAR_INDEX.'?'.VAR_PAGE.'='.$v['alias'].'"><b>'.$t.'</b> '.ICON_POSTS.'</a></td></tr>':'';}}$tpl->block('msg',array('IP'=>$stf->profile['ip'],'STAFF'=>$stf->profile['username'].(isset($stf->profile['lastname'])?' - '.$stf->profile['firstname'].' '.$stf->profile['lastname']:''),'ONLINE'=>($stf->profile['log_expire']>=time())?vTime::live(time()- $stf->profile['log_time'],true):'','NOTICE'=>$n,'VERSION'=>$cfg['ver'],'U_LICENSE'=>VAR_INDEX.'?'.VAR_PAGE.'=cp.welcome&'.VAR_SECTION.'=license',));$tpl->root(PATH_WORKING);$tpl->theme('body','welcome');?>

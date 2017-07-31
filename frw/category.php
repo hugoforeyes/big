@@ -1,0 +1,12 @@
+<?php
+/**
+ * @version		$Id: category.php 3 2012-09-05 9:43 Phu $
+ * @package		vFramework.core.category
+ * @copyright	(C) 2012 Vipcom. All rights reserved.
+ * @license		Commercial
+ */
+defined('V_LIFE')or die('v');
+class vCategory{var $d=array();var $r=array();var $i=array();var $c=0;protected $s='';function __construct($s,$p=false,$t=false,$l=false,$a=false,$m=false,$i=0){$this->load($s,$p,$t,$l,$a,$m,$i);}function load($s,$p=false,$t=false,$l=false,$a=false,$m=false,$i=0){global $cfg,$db,$alt;$this->s=$s;if($t){$tb='#__'.$s;$s='';}else{$tb='#__category';$s=' AND a.section="'.substr($s,0,3).'"';}if($l==2)$s.=' AND a.pid='.($i?$i:0);if($cfg['langs']>1&&$alt['lang']&&$alt['lang']<>$cfg['lang'])$sql='SELECT a.*, t.title
+				FROM '.$tb.' a LEFT JOIN '.$tb.'_trans t
+				ON a.id = t.id
+				WHERE t.lang="'.$alt['lang'].'"'.(($p)?' AND a.enabled=1':'').$s.' ORDER BY a.ordering ASC';else $sql='SELECT * FROM '.$tb.' a WHERE 1'.(($p)?' AND a.enabled=1':'').$s.' ORDER BY a.ordering ASC';if(!$db->query($sql))trigger_error($db->error(),E_USER_ERROR);$this->c=$db->affected_rows();$this->d=$db->fetch();$this->r=null;$this->i=null;for($i=0;$i<$this->c;$i++){if($m&&isset($this->d[$i]['meta']))$this->d[$i]['meta']=vRegistry::parse($this->d[$i]['meta']);if($l&&isset($this->d[$i]['tree'])){$this->d[$i]['tree']=vRegistry::parse($this->d[$i]['tree']);if(!isset($this->d[$i]['tree']['l']))$this->d[$i]['tree']['l']=0;}if($a&&isset($this->d[$i]['alias']))$this->r[$this->d[$i]['alias']]=& $this->d[$i];$this->i[$this->d[$i]['id']]=& $this->d[$i];}}function select($e='',$all=false){global $tpl;if($e){if(is_array($e)){$t=',';foreach($e as $v){if(isset($this->i[$v]['tree']['f'])&&$this->i[$v]['tree']['f'])$t.=$v.','.$this->i[$v]['tree']['f'].',';}$e=$t;unset($t);}else $e=','.$e.','.((isset($this->i[$e]['tree']['f'])&&$this->i[$e]['tree']['f'])?$this->i[$e]['tree']['f'].',':'');}$l=array();if($all===true)$l[0]=$tpl->l['ALL'];else if($all!==false)$l[0]=$all;for($i=0;$i<$this->c;$i++){if(strpos($e,','.$this->d[$i]['id'].',')===false)$l[$this->d[$i]['id']]=((isset($this->d[$i]['tree'])&&$this->d[$i]['tree'])?vPage::blank($this->d[$i]['tree']['l']):'').$this->d[$i]['title'];}return $l;}function nav($e,$c=', '){if($e&&isset($this->i[$e])){$h=$this->i[$e]['title'];$i=$this->i[$e]['pid'];if($i)$h.=($this->i[$i]['title']{0}=='~')?'':$c.$this->i[$i]['title'];return $h;}}}

@@ -1,0 +1,13 @@
+<?php
+/**
+* @version		$Id: group.php 2 2012-02-14 13:28 phu $
+* @package		vFramework.cp.staff
+* @copyright	(C) 2011 Vipcom. All rights reserved.
+* @license		Commercial
+*/
+defined('V_LIFE')or die('v');$tpl->lang('logs');
+class Staff_Logs extends vCPModule{protected $model='id:int,staff:int,page:string,task:string,prop:prop,created:timestamp';protected $task=array('listing'=>array('auth'=>'access','cmd'=>'delete:clear','filter'=>'staff,page,task','model'=>'staff,page,task,prop,created',),'clear'=>array('auth'=>'delete',),);protected function clear(){global $tpl,$db;if($t=vRequest::int('time',0)){$t=time()-(((($t<0)?0:$t - 1)+ 1)*30*24*60*60);$s='DELETE FROM #__staff_logs WHERE created<'.$t;$db->query($s);vPage::redirect($this->url);}else{cpPage::cmd('back',$this->url);cpPage::nav('delete');$h='<table class="list"><tbody>
+<tr class="tbrow"><td><a href="'.$this->url.'&'.VAR_TASK.'=clear&time=1'.'">'.$tpl->_('CLEAR_MONTH').'</a></td></tr>
+<tr class="tbrow"><td><a href="'.$this->url.'&'.VAR_TASK.'=clear&time=3'.'">'.$tpl->_('CLEAR_3MONTH').'</a></td></tr>
+<tr class="tbrow"><td><a href="'.$this->url.'&'.VAR_TASK.'=clear&time=12'.'">'.$tpl->_('CLEAR_YEAR').'</a></td></tr>
+</tbody></table>';$tpl->theme('body','',"@$h");}}protected function listing_sql(){global $alt;$s=parent::listing_sql();$s[0]['s']='SELECT a.*, b.username';$s[0]['f'].=' LEFT JOIN #__staff b ON a.staff=b.id';$s[0]['o']=' ORDER BY id DESC';return $s;}protected function listing_data($d){global $tpl,$stf,$cfg,$map,$alt;$d=parent::listing_data($d);for($i=0,$n=count($d);$i<$n;$i++){$v=&$d[$i];$v['CMD']='';$v['U_VIEW']=$this->url.'&amp;filter[staff]='.$v['staff'];$t=array();foreach(vRegistry::parse($v['prop'])as $a=>$b){switch($a){case 'ip':$t[]=$a.'=<a href="http://whois.vipcom.vn/?ip='.$b.'">'.$b.'</a>';break;case 'id':$t[]=$a.'=<a href="'.VAR_INDEX.'?'.VAR_LANG.'='.$alt['lang'].'&'.VAR_PAGE.'='.$v['page'].'&'.VAR_TASK.'='.$v['task'].'&'.VAR_ID.'='.$b.'">'.$b.'</a>';break;default:$t[]="$a=$b";break;}}$v['prop']=implode('<br />',$t);$v['staff']=($v['staff']>0)?$v['username']:$tpl->_('Unknown');$v['page']='<a href="'.$this->url.'&amp;filter[page]='.$v['page'].'">'.((substr($v['page'],0,3)=='cp.')?$tpl->_(substr($v['page'],3)):$v['page']).'</a>';$v['task']='<a href="'.$this->url.'&amp;filter[task]='.$v['task'].'">'.$tpl->_($v['task']).'</a>';$v['created']=vTime::format($cfg['date']['input'],$v['created']);}return $d;}}

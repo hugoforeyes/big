@@ -1,0 +1,7 @@
+# $Id: .htaccess 3 2013/03/26 14:58 Phu $
+Options -ExecCGI -Includes
+
+#php_flag engine off
+
+AddType text/html .htm .html
+AddType application/x-httpd-php-source .php

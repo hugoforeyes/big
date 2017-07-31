@@ -1,0 +1,8 @@
+<?php
+/**
+ * @version		$Id: bootstrap.php 3 2012-07-27 08:59 Phu $
+ * @package		vFramework.core
+ * @copyright	(C) 2012 Vipcom. All rights reserved.
+ * @license		Commercial
+ */
+defined('V_LIFE')or die('v');define('PATH_CFG',PATH_ROOT.DS.'cfg.php');require PATH_CFG;define('PATH_CTYPE',PATH_CORE.DS.'ctype');define('PATH_LANGS',PATH_CORE.DS.'lang');define('PATH_TMP',PATH_ROOT.DS.'tmp');define('PATH_UPLOAD',PATH_ROOT.DS.'images');define('PATH_THEMES',PATH_ROOT.DS.'themes');define('VAR_ID','id');define('VAR_PAGE','m');define('VAR_SECTION','s');define('VAR_BLOCK','b');define('VAR_LANG','l');define('VAR_TASK','t');define('VAR_PAGING','p');define('VAR_KEYWORD','k');define('VAR_ACTION','a');define('VAR_PUBLISH','pub');define('VAR_RETURN','r');define('VAR_INDEX','index.php');define('URL_BASE',$cfg['base']);define('URL_JS',URL_BASE.'js/');define('URL_UPLOAD',URL_BASE.'images/');define('URL_THEMES',URL_BASE.'themes/');if(defined('V_CP')){define('PATH_CP_CTYPE',PATH_CP_CORE.DS.'ctype');define('PATH_CP_LANGS',PATH_CP_CORE.DS.'lang');define('PATH_CP_THEMES',PATH_CP.DS.'themes');define('PATH_CP_THEME',PATH_CP_THEMES.DS.$cfg['cp']['theme']);define('URL_CP',URL_BASE.substr(PATH_CP,strrpos(PATH_CP,DS)+1).'/');define('URL_CP_THEMES',URL_CP.'themes/');define('URL_CP_THEME',URL_CP_THEMES.$cfg['cp']['theme'].'/');}else define('URL_CP',URL_BASE.'webadmin/');date_default_timezone_set($cfg['timezone']);require PATH_CORE.DS.'core.php';$cfg['langs']=sizeof($cfg['language']);if($cfg['debug']===0){error_reporting(0);}else{error_reporting(E_ALL);if(function_exists('ini_set'))ini_set('display_errors',1);}set_error_handler(array('vPage','error'));register_shutdown_function(array('vPage','finish'));$db=vDatabase::instance();
