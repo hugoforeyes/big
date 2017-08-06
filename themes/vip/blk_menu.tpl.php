@@ -1,8 +1,8 @@
 <!-- BLOCK blk -->
-<div id="mainnavi">
+<div id="mainnavi" class="navigate-wp">
 <!-- BLOCK row -->
 <!-- IF row.TREE == "o1" -->
-<div class="mainnavi_home_placeholder">
+<div class="mainnavi_home_placeholder hidden-xs">
 <!-- ELSEIF row.TREE == "c1" -->
 </div>
 <!-- ELSEIF row.TREE == "o2" -->

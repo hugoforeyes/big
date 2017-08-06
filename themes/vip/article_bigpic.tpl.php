@@ -1,12 +1,14 @@
-<div class="content_type3">
+<div class="page-wp row">
 
 <!-- BLOCK view -->
-<!-- IF view.O_PIC_THUMB --><div class="content_type3_image"><img src="{view.O_PIC_THUMB}" height="362" alt="" /></div><!-- ENDIF -->
-<img class="content_type3_cover" src="{URL_UPLOAD}binner.png" height="362" alt="" />
-<div id="content_inner_scrollbar" class="content_type3_content"><div class="content_type3_content_padded">
-<br>
-{view.CONTENT}
-</div></div>
+	<!-- IF view.O_PIC_THUMB -->
+	<div class="page-img col-md-8 col-sm-12">
+		<img src="{view.O_PIC_THUMB}" alt="" />
+	</div>
+	<!-- ENDIF -->
+	<div class="page-text col-md-4 col-sm-12">
+		{view.CONTENT}
+	</div>
 <!-- END view -->
 
 </div>

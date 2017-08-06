@@ -1,26 +1,14 @@
 <div class="content_products">
 
 <!-- BLOCK list -->
+    {list.PAGING}
          <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
-               <td width="310" valign="top" align="left">
-                  <div class="products_heading">{list.TITLE}</div>
-
-                  <div id="products_image"><!-- Products image -->
-                  </div>
-
-                  <div id="productstext">
-                      <div id="productstextheading" class="productstextheading">
-                      <!-- Products name -->
-                      </div>
-                      <div id="contenttext" class="productstextcontent">
-                      <!-- Products description -->
-                      </div>
-                   </div>
-
-               </td>
+               
                <td id="products">
-<!-- BLOCK row --><a onmouseover="loadContent(this);" data-lightbox="products" data-title="{list.row.TITLE}" data-desc="{list.row.PREVIEW}" href="{list.row.O_PIC_FULL}"><img src="{list.row.O_PIC_THUMB}"  width="70" height="70" border="0" alt="" /></a><!-- END row -->
+<!-- BLOCK row -->
+<a onmouseover="loadContent(this);" data-lightbox="products" data-title="{list.row.TITLE}" data-desc="{list.row.PREVIEW}" href="{list.row.O_PIC_FULL}"><img src="{list.row.O_PIC_THUMB}"  width="70" height="70" border="0" alt="" /></a>
+<!-- END row -->
                </td>
             </tr>
          </table>

@@ -1,0 +1,42 @@
+// Generic
+@import "scss/generic/variables";
+@import "scss/generic/helpers";
+
+//Component
+@import "scss/components/form";
+@import "scss/components/slide";
+@import "scss/components/button";
+@import "scss/components/navigation";
+
+
+//Partials
+@import "scss/partials/footer";
+@import "scss/partials/header";
+@import "scss/partials/main";
+
+
+//General Css
+body {
+	background-color: #f4f4f4;
+	font-family: 'Arial';
+	font-size: 14px;
+}
+
+img {
+	max-width: 100%;
+}
+
+/**--- Tablet --*/
+@media (min-width: 768px) {
+
+}
+
+/**--- Desktop --*/
+@media (min-width: 992px) {
+
+}
+
+/**--- Large screen --*/
+@media (min-width: 1200px) {
+
+}

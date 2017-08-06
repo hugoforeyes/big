@@ -1,0 +1,180 @@
+/* top level
+--------------------------------------------*/
+.nav {
+    margin: 0 auto; 
+    width: 100%;
+    float:left;
+    behavior: url("../navigation.htc");
+    position:relative;
+    z-index:4;
+    background: url("../img/bgmenu.png") no-repeat right top ;
+    background-color: $color-blue;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+
+    & > li {
+        border-top: 1px solid transparent;
+        padding: 10px 0px;
+        float: left;
+        position: relative;/*delete it if you want submenu to be positioned relative to the whole menu instead of this li element*/
+        z-index:5;        
+
+        &:hover, &.onhover {
+            background-color: #eef9ff;
+            border-top: 1px solid #d8d8d8;
+            a {                
+                color: #205e80;
+                z-index: 9; 
+            }
+
+            .drop {
+                left: 0px; /*Use this property to change offset of the dropdown*/
+            }
+
+            .dropToLeft {
+                left: auto;
+                right: -1px;
+            }
+
+            .dropToLeft2 {
+                left: auto;
+                right: -60px;
+            }
+        }
+
+        & > a {
+            padding: 0 17px;
+            font-size: 14px;
+            font-weight: normal;
+            display: inline-block;
+            outline: 0;
+            text-decoration: none;
+            color: white;
+            position: relative;
+        }
+
+        & > a.arrow:after
+        {
+            content: "";
+            width: 22px;
+            height: 14px;
+            background: url(../img/arrow.png) no-repeat ;
+            top:3px;
+            right: -7px;
+            position: relative;
+            display: inline-block;
+        }
+    }
+
+    & > li.menuRight
+    {        
+        float: right;
+        margin-right: 0px;
+
+        &:hover, &.onhover {
+            background: none;
+            border-top: 1px solid transparent;
+            a {                
+                color: white;    
+                text-decoration: underline;            
+            }
+        }
+    }
+
+    /*---User login---*/
+    .userlogin:before {
+        content: "";
+        width: 22px;
+        height: 14px;
+        background: url(../img/user-ic.png) no-repeat ;
+        top:3px;
+        position: relative;
+        display: inline-block;
+
+    }
+
+    
+
+
+    /* sub level
+     --------------------------------------------*/
+    .drop
+    {
+        position: absolute;
+        width: 250px;
+        z-index:5;
+        left: -9999px;
+        border: 1px solid #a7a7a7;
+        border-top:5px solid $color-orange;
+        background: #eef9ff url('../img/gsubmenu.png') repeat-x bottom left;
+
+        padding: 5px 16px;  
+        top:40px;
+
+
+        -webkit-border-bottom-right-radius: 3px;
+        -webkit-border-bottom-left-radius: 3px;
+        -moz-border-radius-bottomright: 3px;
+        -moz-border-radius-bottomleft: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+
+        &.large {
+            width: 520px;
+        }
+
+        /* Elements within the drop down sub-menu
+        --------------------------------------------*/
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            li {
+                padding: 10px 0px;
+                border-bottom: 1px solid #e0dcdc;
+                a {
+                    color: #00466c;
+                    font-size: 13px;
+                }
+
+                &.last {
+                    border-bottom: 0px;
+                }
+
+                
+            }
+
+            .submenu-lv2 {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                li {
+                    border: none;
+                    padding: 3px 0px;
+                    padding-left: 10px;
+
+                    a {
+                        font-size: 12px;
+                        color: #646769;
+                    }
+                }                
+            }
+
+            .submenu-lv2.last {
+                padding-bottom: 10px;
+            }
+
+
+        }
+
+
+    }
+
+
+}

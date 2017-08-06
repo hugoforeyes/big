@@ -1,0 +1,200 @@
+#main-content {
+    padding: 5px;
+    background-color: #ffffff;
+    margin-top: 10px;
+
+    .bluebar {
+		height: 35px;
+		padding: 10px;
+		margin: 0;
+		background-color: transparent;
+		background: url(../img/bluebar-2.png) no-repeat;
+		background-size: 100% 35px;
+		text-align: center;
+		margin-bottom: 1px;
+		.m_products {
+			font-size: 9pt;
+    		color: #b7cfec;
+			.m_product_item {
+				color: #eee;
+    			text-decoration: none;
+    			&.active {
+    				color: #b7c3df;
+    			}
+			}
+		}
+    }
+
+    .page-wp {
+    	margin: 0;
+    	background: #f4f4f4;
+    	.page-img {
+    		padding: 0;
+    		img {
+	    		height: 100%;
+		    	width: 100%;    			
+    		}
+    	}
+    	.page-text {
+    		font-size: 9.5pt;
+    		padding: 20px;
+    		padding-top: 10px;
+    	}
+    }
+
+    .product-wp {
+    	.product-text {
+    		padding-left: 15px;
+    		padding-right: 15px;
+    	}
+    	.product-list {
+	    	margin: 0;
+	    	.category {
+	    		text-align: center;
+	    		margin-bottom: 10px;
+	    	}
+	    }
+    }
+
+    
+}
+
+.shadow {
+	width: 100%;
+    height: 20px;
+    padding: 0;
+    margin: 0 auto;
+    background-color: transparent;
+    background: url(../img/div-shadow.png) no-repeat;
+    background-size: 100% 20px;
+}
+
+.service-wp {
+    padding: 5px;
+    background-color: #fff;
+    text-align: left;
+    .service {
+    	background-color: transparent;
+	    background: url(../img/bottombar-gradient.gif) repeat-x;
+	    background-size: 100% 100%;
+	    position: relative;
+
+	    .item {
+	    	margin-top: 27px;
+	    	margin-bottom: 27px;
+
+	    	&.next {
+	    		margin-left: 0px;
+	    	}
+	    	.item-seperate {
+	    		float: left;
+	    		position: relative;
+	    		img {
+	    			position: absolute;
+    				top: -14px;
+	    		}
+	    	}
+	    	.item-img {
+	    		float: left;
+    			margin-left: 16px;
+    			img {
+	    			height: 77px;
+	    			width: 77px;
+    			}
+	    	}
+
+	    	.item-content {
+	    		width: 64%;
+	    		float: left;
+	    		margin-left: 10px;
+	    		position: relative;
+    			height: 77px;
+
+	    		.item-title {
+	    			font-size: 10pt;
+				    font-weight: bold;
+				    color: #535758;
+				    line-height: 1.6em;
+	    		}
+
+	    		.item-desc {
+	    			font-size: 9pt;
+				    color: #535758;
+				    line-height: 1.3em;
+	    		}
+
+	    		.learnmore {
+	    			width: 100px;
+	    			a{
+		    			font-size: 9pt;
+	    				color: #ffffff;
+	    				text-decoration: none;
+	    				font-weight: normal;
+	    				position: absolute;
+	    				bottom: 5px;
+	    				left: 0px;
+	    			}
+	    		}
+	    	}
+	    }
+    }
+}
+
+/**--- Tablet --*/
+@media (min-width: 768px) {
+	#main-content .bluebar {
+		text-align: right;
+	}
+
+	.service-wp {
+	    .service {
+		    .item {
+		    	&.last {
+		    		margin-left: 0px;
+		    	}
+		    }
+	    }
+	}
+}
+
+/**--- Desktop --*/
+@media (min-width: 992px) {
+	.service-wp {
+	    .service {
+		    background-size: 100% 132px;
+		    .item {
+		    	margin-top: 27px;
+		    	margin-bottom: 27px;
+		    	&.next {
+		    		margin-left: -10px;
+		    	}
+		    	&.last {
+		    		margin-left: -10px;
+		    	}
+		    }
+	    }
+	}
+
+	.page-wp {
+		.page-img img {
+    		height: 331px;
+    	}
+    	.page-text {
+    		height: 331px;
+    		overflow: auto;
+    	}
+    }
+}
+
+/**--- Large screen --*/
+@media (min-width: 1200px) {
+	.page-wp {
+		.page-img img {
+    		height: 362px;
+    	}
+    	.page-text {
+    		height: 362px;
+    	}
+    }
+}
+

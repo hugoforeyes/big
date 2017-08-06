@@ -1,0 +1,68 @@
+.form {
+	input[type="text"],
+    input[type="password"],
+	input[type="number"],
+    input[type="date"],
+	textarea {        
+		border: 2px solid #eff2f3;		
+		padding: 6px 7px 6px 12px;
+		outline: none;	
+		font-size: 12px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+
+	.input-search {
+		width: 230px;
+	}
+	.input-search-wp:after {				
+		content: "";
+		background: $color-blue url(../img/search-ic.png) no-repeat center center;
+		width: 29px;
+		height: 30px;
+		display: block;	
+		display: inline-block;
+		position: relative;
+		top: 10px;
+		right: 0px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+		margin-left: -6px;
+	}
+
+	/* CSS FOR MOBLIE */
+	&.search-form-mobile {
+		margin-bottom: 20px;
+	}
+	/* Input search for mobile */
+	.input-search-mobile-wp {
+		margin-right: 36px;
+		padding: 0px 10px 0px 20px;
+		.input-search-mobile {
+			float: left;
+			width: 100%;
+		}
+
+	}
+}
+
+/**--- Tablet --*/
+@media (min-width: 768px) {
+    
+}
+
+/**--- Desktop --*/
+@media (min-width: 992px) {
+    
+}
+
+/**--- Large screen --*/
+@media (min-width: 1200px) {
+    
+
+}
+
+
+
