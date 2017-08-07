@@ -1,59 +1,37 @@
-<div class="content_products">
+<div class="content_products ">
 
 <!-- BLOCK list -->
-    {list.PAGING}
-         <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-               
-               <td id="products">
+<div class="pd-header clearfix">
+  <div class="pull-left title">{list.TITLE}</div>
+  <div class="pull-right">{list.PAGING}</div>
+</div>
+<div class="pd-list row" id="product-list">
 <!-- BLOCK row -->
-<a onmouseover="loadContent(this);" data-lightbox="products" data-title="{list.row.TITLE}" data-desc="{list.row.PREVIEW}" href="{list.row.O_PIC_FULL}"><img src="{list.row.O_PIC_THUMB}"  width="70" height="70" border="0" alt="" /></a>
+<div class="col-md-part-5 pd-item-wp">
+  <div class="pd-item" onclick="showDetail('{list.row.ID}');">
+    <a data-id="{list.row.ID}"
+      data-title="{list.row.TITLE}" data-desc="{list.row.PREVIEW}" 
+      data-img="{list.row.O_PIC_FULL}][{list.row.O_PIC1}][{list.row.O_PIC2}][{list.row.O_PIC3}][{list.row.O_PIC4}"
+      href="javascript:;">
+      <img src="{list.row.O_PIC_FULL}" border="0" alt="" />
+    </a>
+  </div>
+  <div class="pd-name">{list.row.TITLE}</div>
+</div>
 <!-- END row -->
-               </td>
-            </tr>
-         </table>
+</div>
+<div id="product-detail" class="row pd-detail-wp" style="display: none;">
+  <div class="pd-detail-bar col-md-12" onclick="showList()"><< BACK</div>
+  <div class="col-md-8 pd-detail-img-wp">
+    <img id="pd-detail-img"/>
+  </div>
+  <div class="col-md-4">
+    <div id="pd-detail-desc"></div>
+    <div id="pd-detail-thumb"></div>
+  </div>
+</div>
+              
 
 <!-- END list -->
 
 </div>
-
-<script type="text/javascript">
-$(document).ready(function () {
-  loadContentFirst();
-});
-
-function loadContent(e) {
-    e = $(e);
-	var prod_image = e.prop("href");
-	var prod_title= e.data("title");
-	var prod_info = e.data("desc");
-
-	$("#products_image").html("<img src='{URL_THEME}img/ajax-loading.gif' />");
-	$("#products_image").html("<img src='" + prod_image + "' width='310' height='260' />");
-
-	$("#products_image").hide();
-	$("#products_image").fadeIn(200);
-
-	$("#productstextheading").html(prod_title);
-	$("#contenttext").html(prod_info);
-
-}
-
-function loadContentFirst() {
-
-    var e = $("#products a:first");
-	var prod_image = e.prop("href");
-	var prod_title= e.data("title");
-	var prod_info = e.data("desc");
-
-	$("#products_image").html("<img src='{URL_THEME}img/ajax-loading.gif' />");
-	$("#products_image").html("<img src='" + prod_image + "' width='310' height='260' />");
-
-
-	$("#products_image").hide();
-	$("#products_image").fadeIn(200);
-
-	$("#productstextheading").html(prod_title);
-	$("#contenttext").html(prod_info);
-}
-</script>

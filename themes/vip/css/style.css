@@ -18,45 +18,18 @@
 .clearfix {
   display: block; }
 
-.form {
-  /* CSS FOR MOBLIE */
-  /* Input search for mobile */ }
-  .form input[type="text"],
-  .form input[type="password"],
-  .form input[type="number"],
-  .form input[type="date"],
-  .form textarea {
-    border: 2px solid #eff2f3;
-    padding: 6px 7px 6px 12px;
-    outline: none;
-    font-size: 12px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px; }
-  .form .input-search {
-    width: 230px; }
-  .form .input-search-wp:after {
-    content: "";
-    background: #017bb7 url(../img/search-ic.png) no-repeat center center;
-    width: 29px;
-    height: 30px;
-    display: block;
-    display: inline-block;
-    position: relative;
-    top: 10px;
-    right: 0px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    margin-left: -6px; }
-  .form.search-form-mobile {
-    margin-bottom: 20px; }
-  .form .input-search-mobile-wp {
-    margin-right: 36px;
-    padding: 0px 10px 0px 20px; }
-    .form .input-search-mobile-wp .input-search-mobile {
-      float: left;
-      width: 100%; }
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="number"],
+.form input[type="date"],
+.form textarea {
+  border: 2px solid #eff2f3;
+  padding: 6px 7px 6px 12px;
+  outline: none;
+  font-size: 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
 
 /**--- Tablet --*/
 /**--- Desktop --*/
@@ -64,130 +37,16 @@
 /**--- Tablet --*/
 /**--- Desktop --*/
 /**--- Large screen --*/
-/* top level
---------------------------------------------*/
-.nav {
-  margin: 0 auto;
-  width: 100%;
-  float: left;
-  behavior: url("../navigation.htc");
-  position: relative;
-  z-index: 4;
-  background: url("../img/bgmenu.png") no-repeat right top;
-  background-color: #017bb7;
-  -webkit-border-bottom-right-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  font-family: Arial, Helvetica, sans-serif;
-  list-style: none;
-  padding: 0;
-  /*---User login---*/
-  /* sub level
-   --------------------------------------------*/ }
-  .nav > li {
-    border-top: 1px solid transparent;
-    padding: 10px 0px;
-    float: left;
-    position: relative;
-    /*delete it if you want submenu to be positioned relative to the whole menu instead of this li element*/
-    z-index: 5; }
-    .nav > li:hover, .nav > li.onhover {
-      background-color: #eef9ff;
-      border-top: 1px solid #d8d8d8; }
-      .nav > li:hover a, .nav > li.onhover a {
-        color: #205e80;
-        z-index: 9; }
-      .nav > li:hover .drop, .nav > li.onhover .drop {
-        left: 0px;
-        /*Use this property to change offset of the dropdown*/ }
-      .nav > li:hover .dropToLeft, .nav > li.onhover .dropToLeft {
-        left: auto;
-        right: -1px; }
-      .nav > li:hover .dropToLeft2, .nav > li.onhover .dropToLeft2 {
-        left: auto;
-        right: -60px; }
-    .nav > li > a {
-      padding: 0 17px;
-      font-size: 14px;
-      font-weight: normal;
-      display: inline-block;
-      outline: 0;
-      text-decoration: none;
-      color: white;
-      position: relative; }
-    .nav > li > a.arrow:after {
-      content: "";
-      width: 22px;
-      height: 14px;
-      background: url(../img/arrow.png) no-repeat;
-      top: 3px;
-      right: -7px;
-      position: relative;
-      display: inline-block; }
-  .nav > li.menuRight {
-    float: right;
-    margin-right: 0px; }
-    .nav > li.menuRight:hover, .nav > li.menuRight.onhover {
-      background: none;
-      border-top: 1px solid transparent; }
-      .nav > li.menuRight:hover a, .nav > li.menuRight.onhover a {
-        color: white;
-        text-decoration: underline; }
-  .nav .userlogin:before {
-    content: "";
-    width: 22px;
-    height: 14px;
-    background: url(../img/user-ic.png) no-repeat;
-    top: 3px;
-    position: relative;
-    display: inline-block; }
-  .nav .drop {
-    position: absolute;
-    width: 250px;
-    z-index: 5;
-    left: -9999px;
-    border: 1px solid #a7a7a7;
-    border-top: 5px solid #e67e22;
-    background: #eef9ff url("../img/gsubmenu.png") repeat-x bottom left;
-    padding: 5px 16px;
-    top: 40px;
-    -webkit-border-bottom-right-radius: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    -moz-border-radius-bottomright: 3px;
-    -moz-border-radius-bottomleft: 3px;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    /* Elements within the drop down sub-menu
-    --------------------------------------------*/ }
-    .nav .drop.large {
-      width: 520px; }
-    .nav .drop ul {
-      margin: 0px;
-      padding: 0px;
-      list-style: none; }
-      .nav .drop ul li {
-        padding: 10px 0px;
-        border-bottom: 1px solid #e0dcdc; }
-        .nav .drop ul li a {
-          color: #00466c;
-          font-size: 13px; }
-        .nav .drop ul li.last {
-          border-bottom: 0px; }
-      .nav .drop ul .submenu-lv2 {
-        padding-top: 5px;
-        padding-bottom: 5px; }
-        .nav .drop ul .submenu-lv2 li {
-          border: none;
-          padding: 3px 0px;
-          padding-left: 10px; }
-          .nav .drop ul .submenu-lv2 li a {
-            font-size: 12px;
-            color: #646769; }
-      .nav .drop ul .submenu-lv2.last {
-        padding-bottom: 10px; }
+.vf_pag a {
+  padding: 6px 8px;
+  background: #f5f5f5;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 8.5pt;
+  color: #6d6b6b; }
+  .vf_pag a.active {
+    color: #fff;
+    background: #313131; }
 
 footer {
   margin-bottom: 10px; }
@@ -317,6 +176,47 @@ header .navigate-wp {
     #main-content .product-wp .product-list .category {
       text-align: center;
       margin-bottom: 10px; }
+  #main-content .content_products .pd-header {
+    border-bottom: solid 1px #dadada;
+    margin-bottom: 10px;
+    padding-left: 3px; }
+    #main-content .content_products .pd-header .title {
+      text-transform: uppercase;
+      margin-top: 22px;
+      font-family: sans-serif;
+      letter-spacing: 2px;
+      color: #225c82; }
+  #main-content .content_products .pd-list {
+    margin: 0; }
+    #main-content .content_products .pd-list .pd-item {
+      border: 1px solid #dadada;
+      height: 182px; }
+      #main-content .content_products .pd-list .pd-item img {
+        width: 100%;
+        height: 100%; }
+    #main-content .content_products .pd-list .pd-name {
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: center;
+      font-size: 9.5pt;
+      color: #797878;
+      margin-top: 5px; }
+    #main-content .content_products .pd-list .pd-item-wp {
+      margin-bottom: 10px; }
+  #main-content .content_products .pd-detail-wp .pd-detail-bar {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: #225c82;
+    margin-left: 5px; }
+  #main-content .content_products .pd-detail-wp .pd-detail-img-wp {
+    text-align: center;
+    height: 417px; }
+    #main-content .content_products .pd-detail-wp .pd-detail-img-wp img {
+      max-height: 100%; }
 
 .shadow {
   width: 100%;

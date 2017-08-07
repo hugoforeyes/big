@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><!--Bật Responsive-->
 
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <!---Insert CSS-->        
 <link rel="stylesheet" href="{URL_THEME}css/vendor/normalize.min.css" /> <!--Reset CSS-->
@@ -123,5 +124,53 @@
 <!--Insert custom javascript-->        
   <script src="{URL_THEME}js/vendor/bootstrap.js"></script>       
   <script src="{URL_THEME}js/main.js"></script> 
+
+
+
+  <script type="text/javascript">
+
+      function showDetail(id) {
+        //Get data
+        var $tag_data = $("#product-list a[data-id='"+id+"']").first();
+        var data_img = createDataImg($tag_data.attr('data-img'));
+        $("#pd-detail-desc").html($tag_data.attr('data-desc'));
+        $("#pd-detail-thumb").html(createHtmlThumbnail(data_img));
+        loadImage(data_img[0]);
+        //Show
+        $("#product-detail").show();
+        $("#product-list").hide();
+      }
+      function showList() {
+        $("#product-detail").hide();
+        $("#product-list").show();
+      }
+
+      function loadImage(src) {
+        $("#pd-detail-img").attr('src', src);
+      }
+
+
+      function createHtmlThumbnail(imgs) {
+        var html = '<div class="row">';
+        for(var i in imgs) {
+            html += '<div class="pd-detail-thm col-md-part-5" onclick="loadImage(\''+imgs[i]+'\')">';
+            html += '<img s'+'rc="'+imgs[i]+'"/>';
+            html += '</div>';
+        }
+        html += "</div>";
+        return html;
+      }
+
+      function createDataImg(text_img) {
+        var arr = text_img.split("][");
+        var result = [];
+        for (var i in arr) {
+            if( ! arr[i].endsWith('images/'))
+                result.push(arr[i]);
+        }
+        return result;
+      }
+
+    </script>
 </body>
 </html>

@@ -102,6 +102,6 @@ $cfg = array(
 		'lang' => 'en'
 	),
 
-	'paging' => 10,
+	'paging' => 15,
 	'flood' => 60,	//seconds
 );

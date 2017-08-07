@@ -7,22 +7,22 @@
  */
 defined('V_LIFE') or die('v');
 $gallery_cfg = array(
-    'structure' => 'id:int,cid:page,title:string,alias:alias,pic_thumb:image,pic_full:image,pic_full_tit:text,preview:text,content:html,prop:prop,hot:int,hits:int,ordering:int,created:int,modified:int,published:int,',
+    'structure' => 'id:int,cid:page,title:string,alias:alias,pic_thumb:image,pic_full:image,pic_full_tit:text,preview:text,content:html,prop:prop,hot:int,hits:int,ordering:int,created:int,modified:int,published:int,pic1:image,pic2:image,pic3:image,pic4:image',
     'trans' => 'title,preview,content,prop,meta',
     'langs' => 1,
     'tpl' => 'gallery',
     'task' => array(
         'cat' => array(
             'type' => 3,
-            'field' => 'cid,title,pic_thumb,pic_full,preview,prop,hot,hits,created,modified,published'
+            'field' => 'cid,title,pic_thumb,pic_full,preview,prop,hot,hits,created,modified,published,pic1,pic2,pic3,pic4'
         ),
         'list' => array(
             'type' => 2,
-            'field' => 'title,pic_thumb,pic_full,preview,prop,hot,hits,created,modified,published'
+            'field' => 'title,pic_thumb,pic_full,preview,prop,hot,hits,created,modified,published,pic1,pic2,pic3,pic4'
         ),
         'view' => array(
             'type' => 1,
-            'field' => 'title,pic_thumb,pic_full,pic_full_tit,preview,content,prop,meta,hot,hits,ordering,created,modified,published',
+            'field' => 'title,pic_thumb,pic_full,pic_full_tit,preview,content,prop,meta,hot,hits,ordering,created,modified,published,pic1,pic2,pic3,pic4',
             'next' => 'title,pic_thumb,prop,hot,hits,created,modified,published'
         )
     )
