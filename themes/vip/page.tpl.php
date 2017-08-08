@@ -96,7 +96,6 @@
 
 
         <!-- IF P07 -->
-        
         <div class="service-wp">
             <div class="service">
                 <div class="row">{P07}</div>
@@ -134,7 +133,9 @@
         var $tag_data = $("#product-list a[data-id='"+id+"']").first();
         var data_img = createDataImg($tag_data.attr('data-img'));
         $("#pd-detail-desc").html($tag_data.attr('data-desc'));
-        $("#pd-detail-thumb").html(createHtmlThumbnail(data_img));
+        var html = createHtmlThumbnail(data_img);
+        $("#pd-detail-thumb-xs").html(html);
+        $("#pd-detail-thumb-md").html(html);
         loadImage(data_img[0]);
         //Show
         $("#product-detail").show();
@@ -151,12 +152,16 @@
 
 
       function createHtmlThumbnail(imgs) {
-        var html = '<div class="row">';
+        var html = '<div class="row pd-thm-list">';
+        html += '<div class="col-sm-1 visible-sm"></div>';
         for(var i in imgs) {
-            html += '<div class="pd-detail-thm col-md-part-5" onclick="loadImage(\''+imgs[i]+'\')">';
+            html += '<div class="col-md-part-5 col-xs-part-5 col-sm-2 pd-thm-wp" onclick="loadImage(\''+imgs[i]+'\')">';
+            html += '<div class="pd-detail-thm">';
             html += '<img s'+'rc="'+imgs[i]+'"/>';
             html += '</div>';
+            html += '</div>';
         }
+        html += '<div class="col-sm-1 visible-sm"></div>';
         html += "</div>";
         return html;
       }
