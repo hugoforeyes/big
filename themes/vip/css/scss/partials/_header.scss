@@ -31,20 +31,20 @@ header {
 			text-transform: uppercase;
 		    font-family: sans-serif;
 		    letter-spacing: 2px;
-		    color: #306aa2;
+		    color: #535758;
 		    text-decoration: none;
 		    font-size: 9.3pt;
 		}
 
 		a:hover, a.active {
-			color: #999;
+			color: #f7941d;
 		}
 	}
 }
 
 .mobile-bar {
 	height: 38px;
-	background: $color-blue;
+	background: #a95c00;
 	#btn-menu {
 		padding-top: 8px;
 		padding-left: 15px;
@@ -105,7 +105,7 @@ header {
 		.navigate-wp {
 			float: right;
 			margin-top: 60px;
-			margin-right: 36px;
+			margin-right: 10px;
 		}
 
 		.social-wp {
@@ -116,6 +116,9 @@ header {
 
 /**--- Large screen --*/
 @media (min-width: 1200px) {
-	
-
+	header {
+		.navigate-wp {
+			margin-right: 36px;
+		}
+	}
 }

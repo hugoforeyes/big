@@ -26,28 +26,7 @@
 <script type="text/javascript" src="{URL_THEME}js/jquery.slimscroll.min.js"></script>
 <script type="text/javascript" src="{URL_THEME}js/lightbox.min.js"></script>
 
-
-
-
-
-
-    
-
-
-
-
-
-
-
 </head>
-
-
-
-
-
-
-
-
 <div id="page">
     <!-- Navigation for mobile -->
     <nav id="menu" class="mm-menu mm-horizontal mm-ismenu mm-light custom-mmenu">  
@@ -56,7 +35,6 @@
             <li><a href="/big/about/">About us</a></li>
             <li><a href="/big/service/">Service</a></li>
             <li><a href="/big/products/">Products</a></li>
-            <li><a href="/big/career/">Career</a></li>
             <li><a href="/big/contact/">Contact us</a></li>
         </ul>
     </nav>

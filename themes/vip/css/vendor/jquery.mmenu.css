@@ -138,7 +138,7 @@ html.mm-blocking #mm-blocker {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      /*color: inherit;*/
+      color: #a07a1d;
       line-height: 20px;
       display: block;
       padding: 10px 10px 10px 20px;
