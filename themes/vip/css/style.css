@@ -193,7 +193,7 @@ header .navigate-wp {
       margin-top: 22px;
       font-family: sans-serif;
       letter-spacing: 2px;
-      color: #824e22; }
+      color: #f7941d; }
   #main-content .content_products .pd-list {
     margin: 0; }
     #main-content .content_products .pd-list .pd-item {
@@ -202,9 +202,12 @@ header .navigate-wp {
       padding-top: 100%; }
       #main-content .content_products .pd-list .pd-item img {
         position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%; }
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%; }
     #main-content .content_products .pd-list .pd-name {
       width: 100%;
       text-overflow: ellipsis;
@@ -217,11 +220,12 @@ header .navigate-wp {
     #main-content .content_products .pd-list .pd-item-wp {
       margin-bottom: 10px; }
   #main-content .content_products .pd-detail-wp .pd-detail-bar {
+    cursor: pointer;
     text-transform: uppercase;
     margin-bottom: 10px;
     font-family: sans-serif;
     letter-spacing: 2px;
-    color: #824e22;
+    color: #f7941d;
     margin-left: 5px; }
   #main-content .content_products .pd-detail-wp .pd-detail-img-wp {
     text-align: center; }
@@ -231,11 +235,13 @@ header .navigate-wp {
     height: 100%;
     margin-right: 0px;
     color: #717171;
-    padding: 20px 2px; }
+    padding: 20px 2px;
+    overflow: auto; }
   #main-content .content_products .pd-detail-wp .pd-info .pd-detail-thumb .pd-thm-wp {
     padding-right: 3px;
     padding-left: 3px; }
     #main-content .content_products .pd-detail-wp .pd-info .pd-detail-thumb .pd-thm-wp .pd-detail-thm {
+      cursor: pointer;
       text-align: center;
       border: solid 1px #9c9c9c;
       padding: 2px; }
@@ -317,10 +323,16 @@ header .navigate-wp {
 
   #main-content .content_products .pd-list .pd-item {
     padding-top: 0px;
-    position: static;
-    height: 147px; }
+    height: 147px;
+    text-align: center; }
     #main-content .content_products .pd-list .pd-item img {
-      position: static; }
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%; }
   #main-content .content_products .pd-detail-wp .pd-detail-img-wp {
     height: 315px; }
     #main-content .content_products .pd-detail-wp .pd-detail-img-wp img {

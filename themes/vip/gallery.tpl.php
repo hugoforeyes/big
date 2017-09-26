@@ -10,10 +10,11 @@
 <div class="col-md-part-5 col-sm-3 col-xs-6 pd-item-wp">
   <div class="pd-item" onclick="showDetail('{list.row.ID}');">
     <a data-id="{list.row.ID}"
-      data-title="{list.row.TITLE}" data-desc="{list.row.PREVIEW}" 
+      data-title="{list.row.TITLE}"
       data-img="{list.row.O_PIC_FULL}][{list.row.O_PIC1}][{list.row.O_PIC2}][{list.row.O_PIC3}][{list.row.O_PIC4}"
       href="javascript:;">
       <img src="{list.row.O_PIC_FULL}" border="0" alt="" />
+      <div class="datadesc" style="display: none;">{list.row.PREVIEW}</div>
     </a>
   </div>
   <div class="pd-name">{list.row.TITLE}</div>

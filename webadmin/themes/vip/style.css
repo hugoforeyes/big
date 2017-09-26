@@ -319,11 +319,14 @@ table.list td.cw3{width:200px}
 
 /* TABLE Edit */
 .form_wra{display:table;border:1px solid #ccc;width:100%}
+.form_wra .view img {max-height: 150px}
 .tr_wra{display:table-row}
 .td_wra{display:table-cell;padding:2px;vertical-align:top}
 
 .td_wra table.list{margin-bottom:20px}
 .td_wra table th{width:120px;background:#fff}
+
+table.form img {max-height: 150px}
 
 table.form{border-collapse:separate;border:1px solid #e4e4e4;empty-cells:show;width:100%}
 table.form th{padding:7px;border:0;vertical-align:top;font-weight:300;line-height:17px;text-align:right;color:#666}

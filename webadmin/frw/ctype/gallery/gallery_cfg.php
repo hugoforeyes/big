@@ -7,7 +7,7 @@
  */
 defined('V_LIFE') or die('v');
 $gallery_cfg = array(
-    'structure' => 'id:int,cid:page,title:string,alias:alias,pic_thumb:image,pic_full:image,pic_full_tit:text,preview:text,content:html,prop:prop,hot:int,hits:int,created:timestamp,modified:timestamp,published:timestamp,pic1:image,pic2:image,pic3:image,pic4:image',
+    'structure' => 'id:int,cid:page,title:string,alias:alias,pic_thumb:image,pic_full:image,pic_full_tit:text,preview:html,content:html,prop:prop,hot:int,hits:int,created:timestamp,modified:timestamp,published:timestamp,pic1:image,pic2:image,pic3:image,pic4:image',
     'trans' => 'title,preview,content,prop,meta',
     'langs' => 1,
     'task' => array(
@@ -21,7 +21,7 @@ $gallery_cfg = array(
         ),
         'view' => array(
             'type' => 1,
-            'auth' => 'access'
+            'auth' => 'access',
         ),
         'delete' => array(
             'type' => 11,
@@ -31,8 +31,8 @@ $gallery_cfg = array(
         'edit' => array(
             'type' => 12,
             'auth' => 'access',
-            'field' => 'title,alias,pic_thumb,pic_full,pic_full_tit,preview,content,prop,meta,published,pic1,pic2,pic3,pic4',
-            'render' => 'title,alias,pic_thumb,pic_full,preview,content,prop,meta,published,pic1,pic2,pic3,pic4',
+            'field' => 'title,alias,pic_full,pic_full_tit,preview,content,prop,meta,published,pic1,pic2,pic3,pic4',
+            'render' => 'title,alias,pic_full,preview,content,prop,meta,published,pic1,pic2,pic3,pic4',
             'notnull' => 'title'
         ),
         'publish' => array(
@@ -49,7 +49,7 @@ $gallery_cfg = array(
         ),
         'imexport' => array(
             'type' => 31,
-            'field' => 'id,title,alias,pic_thumb,pic_full,preview,content,hot,hit,published,prop,meta',
+            'field' => 'id,title,alias,pic_full,preview,content,hot,hit,published,prop,meta',
             'render' => 'prop,meta',
             'auth' => 'admin',
             'paging' => 1000

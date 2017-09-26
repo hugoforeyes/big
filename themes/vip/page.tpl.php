@@ -110,7 +110,7 @@
         //Get data
         var $tag_data = $("#product-list a[data-id='"+id+"']").first();
         var data_img = createDataImg($tag_data.attr('data-img'));
-        $("#pd-detail-desc").html($tag_data.attr('data-desc'));
+        $("#pd-detail-desc").html($tag_data.find(".datadesc").first().html());
         var html = createHtmlThumbnail(data_img);
         $("#pd-detail-thumb-xs").html(html);
         $("#pd-detail-thumb-md").html(html);

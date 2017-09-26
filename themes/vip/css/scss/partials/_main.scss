@@ -66,7 +66,7 @@
 			    margin-top: 22px;
 			    font-family: sans-serif;
 			    letter-spacing: 2px;
-			    color: #824e22;
+			    color: #f7941d;
     		}
 		}
 		.pd-list {
@@ -78,9 +78,12 @@
     			//height: 182px;
     			img {
     				position: absolute;
-    				top : 0;
-    				width: 100%;
-    				height: 100%;
+					top: 50%;
+					transform: translateY(-50%);
+    				width: auto;
+    				height: auto;
+    				max-width: 100%;
+    				max-height: 100%;
     			}
 			}
 			.pd-name {
@@ -100,11 +103,12 @@
 
 		.pd-detail-wp {
 			.pd-detail-bar {
+				cursor: pointer;
 				text-transform: uppercase;
 			    margin-bottom: 10px;
 			    font-family: sans-serif;
 			    letter-spacing: 2px;
-			    color: #824e22;
+			    color: #f7941d;
 			    margin-left: 5px;
 			}
 			.pd-detail-img-wp {
@@ -119,12 +123,14 @@
 					margin-right: 0px;
 					color: #717171;
 					padding: 20px 2px;	
+					overflow: auto;
 				}
 				.pd-detail-thumb {
 					.pd-thm-wp {
 						padding-right: 3px;
 						padding-left: 3px;
 						.pd-detail-thm {
+							cursor: pointer;
 							text-align: center;
 						    border: solid 1px #9c9c9c;
 						    padding: 2px;
@@ -246,10 +252,17 @@
 		.pd-list {
 			.pd-item {
 				padding-top: 0px;
-				position: static;
+				//position: static;
 				height: 147px;
+				text-align: center;
 				img {
-					position: static;
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+					width: auto;
+					height: auto;
+					max-width: 100%;
+    				max-height: 100%;
 				}
 			}
 		}
