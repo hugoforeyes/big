@@ -85,7 +85,7 @@ header .navigate-wp {
     text-decoration: none;
     font-size: 9.3pt; }
   header .navigate-wp a:hover, header .navigate-wp a.active {
-    color: #f7941d; }
+    color: #034ea2; }
 
 .mobile-bar {
   height: 38px;
@@ -193,7 +193,7 @@ header .navigate-wp {
       margin-top: 22px;
       font-family: sans-serif;
       letter-spacing: 2px;
-      color: #f7941d; }
+      color: #034ea2; }
   #main-content .content_products .pd-list {
     margin: 0; }
     #main-content .content_products .pd-list .pd-item {
@@ -225,7 +225,7 @@ header .navigate-wp {
     margin-bottom: 10px;
     font-family: sans-serif;
     letter-spacing: 2px;
-    color: #f7941d;
+    color: #034ea2;
     margin-left: 5px; }
   #main-content .content_products .pd-detail-wp .pd-detail-img-wp {
     text-align: center; }
