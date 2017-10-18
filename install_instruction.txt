@@ -1,0 +1,16 @@
+Bước 1:
+    Mở MySQL và chạy file sql big_database.sql. Sau khi chạy xong, trong database sẽ có database tên big_database
+
+Bước 2:
+    Mở file config.php
+        * Sửa chỗ dòng số 21 và 22 ('user' và 'pass') là username và password của mysql
+
+Bước 3:
+    Đặt thư mục này trong thư mục public html của server
+
+*** GHI CHÚ ***
+Đường dẫn đăng nhập webadmin là: [domain]/webadmin
+Username: Bigadmin
+Password: Bigcorp123
+
+Sau khi đăng nhập, có thể sửa lại tên và password như ý muốn

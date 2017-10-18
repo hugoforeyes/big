@@ -5,10 +5,19 @@
 <!-- ELSEIF row.TREE == "c1" -->
 </tr>
 <!-- ELSEIF row.TREE == "o2" -->
-<div class="col-md-3 col-sm-6 category">
-	<a href="{row.URL}" title="{row.TITLE}">
-		<img src="{row.PIC_THUMB}" width="233" height="168" border="0" alt="{row.TITLE}" />
-	</a>
+<div class="col-md-6 col-sm-6 category">
+	<div class="pd-box">
+		<a href="{row.URL}" title="{row.TITLE}">
+			<div class="pd-box-wp">
+				<div class="pd-box-img">
+					<img src="{row.PIC_THUMB}" border="0" alt="{row.TITLE}" />
+				</div>
+				<div class="pd-box-text">
+					{row.TITLE}
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 <!-- ELSE -->
 <!-- ENDIF -->
