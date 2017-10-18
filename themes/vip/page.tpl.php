@@ -5,18 +5,18 @@
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-<!---Insert CSS-->        
+<!---Insert CSS-->
 <link rel="stylesheet" href="{URL_THEME}css/vendor/normalize.min.css" /> <!--Reset CSS-->
-<link rel="stylesheet" href="{URL_THEME}css/vendor/bootstrap.css" /> 
+<link rel="stylesheet" href="{URL_THEME}css/vendor/bootstrap.css" />
 
 <link rel="stylesheet" href="{URL_THEME}css/vendor/royalslider.css" />
 <link rel="stylesheet" href="{URL_THEME}css/vendor/rs-default.css?v=1.0.4" />
 <link rel="stylesheet" href="{URL_THEME}css/vendor/royalcustom.css" />
 
-<link rel="stylesheet" href="{URL_THEME}css/vendor/jquery.mmenu.css" />             
+<link rel="stylesheet" href="{URL_THEME}css/vendor/jquery.mmenu.css" />
 <!--Enable Responsive for IE9-->
-<!--[if lt IE 9]> 
-    <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script> 
+<!--[if lt IE 9]>
+    <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
 <![endif]-->
 {INC}
 
@@ -29,7 +29,7 @@
 </head>
 <div id="page">
     <!-- Navigation for mobile -->
-    <nav id="menu" class="mm-menu mm-horizontal mm-ismenu mm-light custom-mmenu">  
+    <nav id="menu" class="mm-menu mm-horizontal mm-ismenu mm-light custom-mmenu">
         <ul id="menu-mobile" class="mm-list mm-panel mm-opened mm-current">
             <li><a href="/big/" class="active">Home</a></li>
             <li><a href="/big/about/">About us</a></li>
@@ -38,17 +38,17 @@
             <li><a href="/big/contact/">Contact us</a></li>
         </ul>
     </nav>
-    <!-- End -->            
+    <!-- End -->
     <div class="container">
         <!-- Header Mobile -->
         <div class="mobile-bar visible-xs">
             <a href="#menu" id="btn-menu"></a>
-        </div>                
+        </div>
         <!-- Header Desktop -->
-        <header>                    
+        <header>
             <div class="header-wp clearfix">
               {HDR}
-            </div>           
+            </div>
         </header>
 
         <!-- End header -->
@@ -59,15 +59,27 @@
               {P01}
             </div>
             <div class="content">
-              {P02}
-              {CTN}
+                {P02}
+                <!-- IF P10 || P11 -->
+                <div class="page-wp row">
+                    <div class="page-img col-md-8 col-sm-12">
+                        {P10}
+                        {P11}
+                    </div>
+                    <div class="page-text col-md-4 col-sm-12">
+                        {CTN}
+                    </div>
+                </div>
+                <!-- ELSE -->
+                {CTN}
+                <!-- ENDIF -->
 
-            <!-- IF P03 || P04 -->
-            <div class="product-wp">
-                <div class="product-text">{P03}</div>
-                <div class="product-list row">{P04}</div>
-            </div>
-            <!-- ENDIF -->
+                <!-- IF P03 || P04 -->
+                <div class="product-wp">
+                    <div class="product-text">{P03}</div>
+                    <div class="product-list row">{P04}</div>
+                </div>
+                <!-- ENDIF -->
             </div>
         </div>
         <div class="shadow"></div>
@@ -94,13 +106,13 @@
 
 
 <!-- For royalslider -->
-  <script src="{URL_THEME}js/vendor/jquery.royalslider.min.js"></script>    
+  <script src="{URL_THEME}js/vendor/jquery.royalslider.min.js"></script>
 <!--End jQuery-->
-  <script src="{URL_THEME}js/vendor/jquery.mmenu.js"></script> 
+  <script src="{URL_THEME}js/vendor/jquery.mmenu.js"></script>
 
-<!--Insert custom javascript-->        
-  <script src="{URL_THEME}js/vendor/bootstrap.js"></script>       
-  <script src="{URL_THEME}js/main.js"></script> 
+<!--Insert custom javascript-->
+  <script src="{URL_THEME}js/vendor/bootstrap.js"></script>
+  <script src="{URL_THEME}js/main.js"></script>
 
 
 

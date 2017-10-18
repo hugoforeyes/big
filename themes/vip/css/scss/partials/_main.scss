@@ -40,6 +40,11 @@
     		padding: 20px;
     		padding-top: 10px;
     	}
+
+    	.img-contact {
+    		position: relative;
+    		margin: 0 auto;
+    	}
     }
 
     .product-wp {
@@ -332,28 +337,14 @@
 		.page-wp {
 			.page-img {
 				overflow: hidden;
-		    	height: 331px;
+		    	height: 522px;
 		    	img {
 		    		height: auto;
 		    	}
 		    }
 	    	.page-text {
-	    		height: 331px;
+	    		height: 522px;
 	    		overflow: auto;
-	    	}
-	    }
-	}
-}
-
-/**--- Large screen --*/
-@media (min-width: 1200px) {
-	#main-content {
-		.page-wp {
-			.page-img {
-		    	height: 362px;
-		    }
-	    	.page-text {
-	    		height: 362px;
 	    	}
 	    }
 	}

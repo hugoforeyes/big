@@ -29,11 +29,18 @@
     height: 362px !important;
   }
 
+  .page-img #full-width-slider {
+    height: 522px !important;
+  }
 }
 @media screen and  (min-width: 1200px) {
   #full-width-slider {
     width: 100%;
     height: 362px !important;
+  }
+
+  .page-img #full-width-slider {
+    height: 522px !important;
   }
 
 }
